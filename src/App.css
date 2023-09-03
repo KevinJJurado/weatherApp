@@ -1,0 +1,121 @@
+/*************Loader*************/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__container span{
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(88, 124, 168);
+  border-radius: 50%;
+  animation: pulse 1s infinite ease-in-out;
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/*************Body*************/
+.principal {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.573);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__title {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+.card__title h1 {
+  font-size: 2.5em;
+}
+.card__title h2 {
+  font-size: 1.3em;
+}
+.card__title--image {
+  width: 12rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__title--image h3{
+  position: absolute;
+  bottom: 0;
+
+}
+
+.card__body {
+  display: flex;
+  padding: 1em;
+  padding-top: 0;
+  gap: 3em;
+  padding: 1em;
+}
+.card__body--descrption {
+  display: flex;
+}
+.card__body--descrption ul {
+  list-style-type: none;
+}
+.card__body--temp {
+  width: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card__body--temp button {
+  border-radius: 0.5em;
+  border: none;
+  width: inherit;
+  height: 5vh;
+  font-size: medium;
+  background-color: white;
+  padding: 0.1em;
+}
+.card__body--temp button:hover {
+  background-color: rgba(255, 255, 255, 0.536);
+}
+

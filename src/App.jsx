@@ -59,7 +59,7 @@ function App() {
     const ApiKey = '39164419-4b25eb72fac1a5e62be2c78d3'
     if (weather) {
       const url = `https://pixabay.com/api/?key=${ApiKey}&q=${weather.weather[0].description.replace(' ', '+')}`
-      console.log(url)
+
       axios.get(url)
       .then(res => setBackground(res.data))
       .catch(err => console.log(err))
@@ -68,10 +68,8 @@ function App() {
     
   }, [weather])
   
-  console.log(weather)
-  // console.log(background)
   const myStyle = {
-    backgroundImage: `url('${background?.hits[0].webformatURL}')`
+    backgroundImage: `url('${background?.hits[0]?.webformatURL}')`
   }
 
   return (

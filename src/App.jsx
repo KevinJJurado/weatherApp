@@ -25,7 +25,7 @@ function App() {
     }
     const error = err => {
       if(err.code === err.PERMISSION_DENIED) {
-        alert('Permiso denegado por el usuario')
+        console.log('Permiso denegado por el usuario')
       }
     }
     function loader () {
